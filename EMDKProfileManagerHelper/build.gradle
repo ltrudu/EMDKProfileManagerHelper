@@ -4,17 +4,18 @@ plugins {
 ext {
     PUBLISH_GROUP_ID = 'com.zebra.emdkprofilemanagerhelper'
     PUBLISH_ARTIFACT_ID = 'emdkprofilemanagerhelper'
-    PUBLISH_VERSION = '0.7'
+    PUBLISH_VERSION = '1.0.0'
 }
 
 android {
-    compileSdkVersion 32
+    compileSdk 34
 
     defaultConfig {
-        minSdkVersion 30
-        targetSdkVersion 32
-        versionCode 7
-        versionName "0.7"
+        minSdkVersion 23
+        //noinspection EditedTargetSdkVersion
+        targetSdkVersion 34
+        versionCode 1
+        versionName "1.0.0"
 
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 
