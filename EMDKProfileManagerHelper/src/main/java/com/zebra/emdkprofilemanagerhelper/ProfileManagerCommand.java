@@ -18,7 +18,7 @@ import java.io.StringReader;
 import java.util.ArrayList;
 import java.util.Date;
 
-class ProfileManagerCommand extends CommandBase {
+public class ProfileManagerCommand extends CommandBase {
 
     public static final long SEC_IN_MS = 1000;
     public static final long MIN_IN_MS = SEC_IN_MS * 60;
@@ -110,7 +110,7 @@ class ProfileManagerCommand extends CommandBase {
     };
 
 
-    protected ProfileManagerCommand(Context aContext) {
+    public ProfileManagerCommand(Context aContext) {
         super(aContext);
         mSettings = new CommandBaseSettings(){{
            mTimeOutMS = 20000;
@@ -125,7 +125,7 @@ class ProfileManagerCommand extends CommandBase {
         onEMDKManagerClosed();
     }
 
-    protected void execute(String mxProfile, String mxProfileName, IResultCallbacks resutCallback)
+    public void execute(String mxProfile, String mxProfileName, IResultCallbacks resutCallback)
     {
         // Let's start the timeout mechanism
         super.execute(mSettings);
